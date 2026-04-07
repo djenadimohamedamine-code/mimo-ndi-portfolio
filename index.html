@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mimo NDI – Portfolio</title>
+  <meta name="description" content="Portfolio de Mimo NDI – Ingénieur, développeur Arduino & STM32, créateur de projets électroniques innovants." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-brand">MIMO<span class="accent">NDI</span></div>
+    <ul class="nav-links">
+      <li><a href="#hero">Accueil</a></li>
+      <li><a href="#about">À propos</a></li>
+      <li><a href="#projects">Projets</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-content">
+      <p class="hero-sub">Ingénieur Électronique &amp; Développeur Embarqué</p>
+      <h1 class="hero-title">Mimo <span class="accent">NDI</span></h1>
+      <p class="hero-desc">Je conçois des systèmes embarqués, des cartes Arduino &amp; STM32 et des solutions innovantes à la frontière du matériel et du logiciel.</p>
+      <div class="hero-ctas">
+        <a href="#projects" class="btn-primary" id="hero-cta-projects">Voir mes projets</a>
+        <a href="#contact" class="btn-outline" id="hero-cta-contact">Me contacter</a>
+      </div>
+    </div>
+    <div class="hero-scroll-hint">↓</div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about section" id="about">
+    <div class="container">
+      <span class="section-label">À propos</span>
+      <h2 class="section-title">Passionné par l'électronique &amp; l'embarqué</h2>
+      <div class="about-grid">
+        <div class="about-text">
+          <p>Ingénieur spécialisé dans les systèmes embarqués, je travaille avec des microcontrôleurs <strong>Arduino</strong> et <strong>STM32</strong> pour créer des projets allant de la robotique à l'automatisation industrielle.</p>
+          <p>Mon approche combine rigueur technique et créativité pour livrer des solutions fiables et innovantes.</p>
+          <div class="skills-grid">
+            <span class="skill-tag">Arduino</span>
+            <span class="skill-tag">STM32</span>
+            <span class="skill-tag">C/C++</span>
+            <span class="skill-tag">Python</span>
+            <span class="skill-tag">Électronique</span>
+            <span class="skill-tag">CAO PCB</span>
+            <span class="skill-tag">IoT</span>
+            <span class="skill-tag">RTOS</span>
+          </div>
+        </div>
+        <div class="about-stats">
+          <div class="stat-card">
+            <span class="stat-num">50+</span>
+            <span class="stat-label">Projets réalisés</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-num">5+</span>
+            <span class="stat-label">Ans d'expérience</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-num">10+</span>
+            <span class="stat-label">Technologies maîtrisées</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section class="projects section" id="projects">
+    <div class="container">
+      <span class="section-label">Projets</span>
+      <h2 class="section-title">Mes réalisations Arduino &amp; STM32</h2>
+
+      <!-- PROJECT CARD : Arduino Reel -->
+      <div class="project-featured" id="project-arduino">
+        <div class="project-info">
+          <span class="project-badge">Arduino / STM32</span>
+          <h3 class="project-title">Reel de projets embarqués</h3>
+          <p class="project-desc">Découvrez en vidéo l'ensemble de mes réalisations autour des microcontrôleurs Arduino et STM32 : prototypes, cartes personnalisées, systèmes de contrôle et automatisation.</p>
+          <ul class="project-tech">
+            <li>Arduino UNO / MEGA</li>
+            <li>STM32F4</li>
+            <li>C / C++</li>
+            <li>Capteurs & Actionneurs</li>
+          </ul>
+        </div>
+        <div class="project-video-wrap">
+          <video
+            id="arduino-video"
+            controls
+            preload="metadata"
+            playsinline
+            class="project-video"
+          >
+            <source src="public/videos/FINAL_REEL_ARDUINO.mp4" type="video/mp4" />
+            Votre navigateur ne supporte pas la lecture vidéo.
+          </video>
+          <div class="video-overlay" id="video-overlay" onclick="playVideo()">
+            <div class="play-icon">▶</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- More project cards -->
+      <div class="projects-grid">
+        <div class="project-card" id="project-card-iot">
+          <div class="project-card-icon">🔌</div>
+          <h4>Système IoT industriel</h4>
+          <p>Monitoring temps réel de capteurs industriels via WiFi & MQTT avec dashboard web embarqué.</p>
+          <div class="project-card-tags">
+            <span>ESP32</span><span>MQTT</span><span>C++</span>
+          </div>
+        </div>
+        <div class="project-card" id="project-card-robot">
+          <div class="project-card-icon">🤖</div>
+          <h4>Robot autonome</h4>
+          <p>Robot mobile avec détection d'obstacles, navigation autonome et télécommande Bluetooth.</p>
+          <div class="project-card-tags">
+            <span>STM32</span><span>Bluetooth</span><span>PID</span>
+          </div>
+        </div>
+        <div class="project-card" id="project-card-pcb">
+          <div class="project-card-icon">⚡</div>
+          <h4>Carte PCB custom</h4>
+          <p>Conception et fabrication de cartes électroniques personnalisées pour projets embarqués.</p>
+          <div class="project-card-tags">
+            <span>KiCad</span><span>PCB</span><span>SMD</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact section" id="contact">
+    <div class="container contact-inner">
+      <span class="section-label">Contact</span>
+      <h2 class="section-title">Travaillons ensemble</h2>
+      <p class="contact-sub">Un projet embarqué, une idée à prototyper ? Contactez-moi.</p>
+      <a href="mailto:contact@mimondi.com" class="btn-primary" id="contact-email-btn">Envoyer un email</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p>© 2025 Mimo NDI – Tous droits réservés</p>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
